@@ -1,0 +1,27 @@
+[GNG TOUR - WEBSITE REDESIGN GUIDE]
+
+This document outlines the image assets required to transform the text-heavy GNG Tour website into a visual-centric experience.
+
+-------------------------------------------------------
+
+1. HERO BANNER (Top of the page)
+- File Name: 1_Hero_Banner_1920x800.jpg
+- Dimensions: 1920px (W) x 800px (H)
+- Concept: Immersion. Use wide-angle shots of Golf courses or Hawaii.
+- Text: minimal white text overlay.
+
+2. PRODUCT CARD (Tour Packages)
+- File Name: 2_Product_Card_600x400.jpg
+- Dimensions: 600px (W) x 400px (H)
+- Concept: Clarity. Replace Excel-style lists with image cards.
+- Focus: Show specific details (Pool, Room, Food).
+
+3. PROMOTIONAL BANNER (Call to Action)
+- File Name: 3_Promo_Banner_1920x400.jpg
+- Dimensions: 1920px (W) x 400px (H)
+- Concept: Emotion. Airplane views or Sunsets.
+- Goal: Encourage users to click 'Contact Us'.
+
+-------------------------------------------------------
+* The included .jpg files are placeholders to show dimensions.
+* Please replace them with high-resolution licensed photos.

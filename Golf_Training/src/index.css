@@ -1,0 +1,153 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Manrope:wght@400;500;600;700&display=swap');
+
+:root {
+  --primary: #5356FF;
+  --primary-dark: #3D3BF3;
+  --secondary: #67C6E3;
+  --dark: #1e293b;
+  --gray: #64748b;
+  --light: #f8f9fa;
+  --font-heading: 'Inter', system-ui, -apple-system, sans-serif;
+  --font-body: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+.golf-theme {
+  --primary: #0f3b2e;
+  /* Deep Forest Green */
+  --secondary: #d6a04c;
+  /* Warm Gold */
+  --accent: #66c7b3;
+  /* Mint */
+  --dark: #111827;
+  --gray: #6b7280;
+  --light: #f6f3ea;
+  --font-heading: 'Space Grotesk', 'Manrope', sans-serif;
+  --font-body: 'Manrope', sans-serif;
+
+  font-family: var(--font-body);
+  color: var(--dark);
+  background-color: var(--light);
+}
+
+.golf-theme h1,
+.golf-theme h2,
+.golf-theme h3 {
+  font-family: var(--font-heading);
+}
+
+.golf-theme .btn-primary {
+  background-color: var(--primary);
+  border-color: var(--primary);
+  color: white;
+}
+
+.golf-theme .btn-primary:hover {
+  background-color: #1a3c1b;
+  border-color: #1a3c1b;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-body);
+  color: var(--dark);
+  line-height: 1.6;
+  background-color: #fff;
+  overflow-x: hidden;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  font-family: inherit;
+}
+
+ul {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.bg-light {
+  background-color: var(--light);
+}
+
+.section {
+  padding: 100px 0;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  font-weight: 800;
+  text-align: center;
+  margin-bottom: 1rem;
+  color: var(--dark);
+  letter-spacing: -0.02em;
+  font-family: var(--font-heading);
+}
+
+.section-subtitle {
+  text-align: center;
+  font-size: 1.2rem;
+  color: var(--gray);
+  max-width: 700px;
+  margin: 0 auto 4rem;
+}
+
+.btn {
+  display: inline-block;
+  padding: 16px 32px;
+  border-radius: 50px;
+  font-weight: 600;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: none;
+  box-shadow: 0 4px 14px 0 rgba(15, 59, 46, 0.25);
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+  color: var(--white);
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(15, 59, 46, 0.35);
+}
+
+.grid-3 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2.5rem;
+}
+
+.card {
+  background: var(--white);
+  padding: 2.5rem;
+  border-radius: 20px;
+  box-shadow: 0 10px 40px -10px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 1px solid rgba(0, 0, 0, 0.03);
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 50px -10px rgba(0, 0, 0, 0.1);
+}

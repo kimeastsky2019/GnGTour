@@ -1,0 +1,314 @@
+server {
+    server_name agent.gngmeta.com;
+    
+    client_max_body_size 100M;
+    root /var/www/html;
+    index index.html;
+
+    # Global static files for React apps
+    location /static/ {
+        alias /home/metal/agent/Disaster/supply_analysis/frontend/build/static/;
+        expires 1y;
+        add_header Cache-Control "public, immutable";
+    }
+
+    # GnG Tour landing
+    location = /gng_tour {
+        return 301 /gng_tour/;
+    }
+
+    location /gng_tour/assets/ {
+        root /var/www/html;
+        access_log off;
+        add_header Cache-Control "public, max-age=31536000, immutable";
+    }
+
+    location /gng_tour/ {
+        root /var/www/html;
+        try_files $uri $uri/ /gng_tour/index.html;
+    }
+
+    # Root redirect
+    location = / {
+        return 301 /eop;
+    }
+
+    # Login Service
+    location /login {
+        proxy_pass http://localhost:5009;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header X-Forwarded-Proto $scheme;
+        proxy_redirect off;
+    }
+
+    # Dashboard Service
+    location /dashboard {
+        proxy_pass http://localhost:5008/;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header X-Forwarded-Proto $scheme;
+        proxy_redirect off;
+        rewrite ^/dashboard/(.*)$ /$1 break;
+    }
+
+    # Assets redirect and proxy
+    location = /assets {
+        return 301 /assets/;
+    }
+
+    location /assets/ {
+        proxy_pass http://localhost:5009/;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header X-Forwarded-Proto $scheme;
+        proxy_redirect off;
+        rewrite ^/assets/(.*)$ /$1 break;
+    }
+
+    # Co-workon Service
+    location = /co-workon {
+        return 301 /co-workon/;
+    }
+
+    location /co-workon/ {
+        proxy_pass http://localhost:5010/;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header X-Forwarded-Proto $scheme;
+        proxy_redirect off;
+    }
+
+    # EOP Service
+    location /eop {
+        proxy_pass http://localhost:8000/;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header X-Forwarded-Proto $scheme;
+        proxy_redirect off;
+    }
+
+    # Energy Demand Analysis Service
+    location /da {
+        proxy_pass http://localhost:5002/;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header X-Forwarded-Proto $scheme;
+        proxy_redirect off;
+    }
+
+    # Static files for /sa
+    location /sa/static/ {
+        alias /home/metal/agent/Disaster/supply_analysis/frontend/build/static/;
+        expires 1y;
+        add_header Cache-Control "public, immutable";
+    }
+
+    # Energy Supply Analysis Service
+    location = /sa {
+        return 301 /sa/;
+    }
+
+    location /sa {
+        proxy_pass http://localhost:5003/;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header X-Forwarded-Proto $scheme;
+        proxy_redirect off;
+    }
+
+    # Digital Twin Service
+    location /dtwin {
+        proxy_pass http://localhost:5004/;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header X-Forwarded-Proto $scheme;
+        proxy_redirect off;
+    }
+
+    # Weather Service
+    location /weather {
+        proxy_pass http://localhost:5005/;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header X-Forwarded-Proto $scheme;
+        proxy_redirect off;
+    }
+
+    location /weather/static/ {
+        proxy_pass http://localhost:5005/static/;
+        proxy_cache_valid 200 1h;
+    }
+
+    location /weather/favicon.ico {
+        proxy_pass http://localhost:5005/favicon.ico;
+    }
+
+    location /weather/manifest.json {
+        proxy_pass http://localhost:5005/manifest.json;
+    }
+
+    # Ontology Service
+    location = /ontology {
+        return 301 /ontology/;
+    }
+
+    location /ontology/ {
+        proxy_pass http://localhost:5000/;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header X-Forwarded-Proto $scheme;
+        proxy_redirect off;
+        rewrite ^/ontology/(.*)$ /$1 break;
+    }
+
+    # Disaster Response Platform
+    location = /disaster {
+        return 301 /disaster/;
+    }
+
+    location /disaster/ {
+        proxy_pass http://localhost:5008/;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header X-Forwarded-Proto $scheme;
+        proxy_redirect off;
+        rewrite ^/disaster/(.*)$ /$1 break;
+    }
+
+
+    # Demand Control Service
+    location = /demand_control {
+        return 301 /demand_control/;
+    }
+
+    location /demand_control/ {
+        proxy_pass http://localhost:5011/;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header X-Forwarded-Proto $scheme;
+        proxy_redirect off;
+    }
+
+    # Demand Control API
+    location /demand_control/api/ {
+        proxy_pass http://localhost:5012/api/;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header X-Forwarded-Proto $scheme;
+        proxy_redirect off;
+        proxy_http_version 1.1;
+        proxy_read_timeout 300s;
+        proxy_connect_timeout 75s;
+    }
+    # Image Broadcasting Service
+    location /ibs {
+        proxy_pass http://localhost:5006/;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header X-Forwarded-Proto $scheme;
+        proxy_redirect off;
+    }
+
+    # Backend API
+    location /api/ {
+        proxy_pass http://localhost:8000/api/;
+        proxy_http_version 1.1;
+        proxy_read_timeout 300s;
+        proxy_connect_timeout 75s;
+    }
+
+    location /health {
+        proxy_pass http://localhost:8000/health;
+    }
+
+    location /docs {
+        proxy_pass http://localhost:8000/docs;
+    }
+
+    location /openapi.json {
+        proxy_pass http://localhost:8000/openapi.json;
+    }
+
+    # Images Service
+    location /images/ {
+        proxy_pass http://localhost:5001/;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header X-Forwarded-Proto $scheme;
+        proxy_redirect off;
+    }
+
+    # Jena Service
+    location /jena/ {
+        proxy_pass http://localhost:3030/;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header X-Forwarded-Proto $scheme;
+        proxy_redirect off;
+    }
+
+    # ETM React Service - Energy Transition Model
+    location = /dt {
+        return 301 /dt/;
+    }
+
+    location /dt/ {
+        proxy_pass http://localhost:3000/dt/;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header X-Forwarded-Proto $scheme;
+        proxy_redirect off;
+        proxy_read_timeout 300s;
+        proxy_connect_timeout 75s;
+        proxy_http_version 1.1;
+        proxy_set_header Upgrade $http_upgrade;
+        proxy_set_header Connection "upgrade";
+    }
+
+    location /dt/api/ {
+        proxy_pass http://localhost:3001/api/;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header X-Forwarded-Proto $scheme;
+        proxy_redirect off;
+        proxy_read_timeout 300s;
+        proxy_connect_timeout 75s;
+    }
+
+    listen 443 ssl; # managed by Certbot
+    ssl_certificate /etc/letsencrypt/live/agent.gngmeta.com/fullchain.pem; # managed by Certbot
+    ssl_certificate_key /etc/letsencrypt/live/agent.gngmeta.com/privkey.pem; # managed by Certbot
+    include /etc/letsencrypt/options-ssl-nginx.conf; # managed by Certbot
+    ssl_dhparam /etc/letsencrypt/ssl-dhparams.pem; # managed by Certbot
+
+}server {
+    if ($host = agent.gngmeta.com) {
+        return 301 https://$host$request_uri;
+    } # managed by Certbot
+
+
+    listen 80;
+    server_name agent.gngmeta.com;
+    return 404; # managed by Certbot
+
+
+}

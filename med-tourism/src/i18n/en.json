@@ -1,0 +1,278 @@
+{
+    "hero": {
+        "title": "Korea Medical Tourism Platform for Central Asian Patients",
+        "subtitle": "One-stop service connecting Central Asian patients with Korean medical staff via AI, covering Internal Medicine, OB/GYN, Plastic Surgery, Dermatology, Orthopedics, and Pain Medicine.",
+        "ctaPrimary": "Free Consultation (WhatsApp / Telegram)",
+        "ctaSecondary": "Request a Quote",
+        "trust1": "Partnership with major university hospitals and specialized clinics in Seoul/Busan",
+        "trust2": "Russian-speaking coordinators available, accompanying the entire process"
+    },
+    "whyKorea": {
+        "title": "Why Medical Korea?",
+        "bullets": [
+            "World-class medical standards and latest equipment.",
+            "Precise check-ups and accurate diagnosis within 1–3 days.",
+            "Foreign patient-friendly interpretation, guidance, and transparent costs.",
+            "AI-based personalized recommendations for departments, specialists, and hospitals."
+        ]
+    },
+    "specialties": {
+        "title": "Key Medical Specialties",
+        "internal": {
+            "title": "Internal Medicine & Comprehensive Check-up",
+            "description": "Chronic disease management (heart, blood vessels, stomach, liver, diabetes, thyroid) and comprehensive health check-up packages."
+        },
+        "gynecology": {
+            "title": "OB/GYN & Infertility",
+            "description": "Women's diseases, infertility/IVF, prenatal tests, and genetic screening."
+        },
+        "plastic": {
+            "title": "Plastic Surgery",
+            "description": "Eye, nose, lifting, body contouring, and safety-focused surgery systems."
+        },
+        "dermatology": {
+            "title": "Dermatology & Beauty Clinic",
+            "description": "Acne, scars, melasma, blemish treatment, and short-term laser/elasticity procedures."
+        },
+        "orthoPain": {
+            "title": "Orthopedics & Pain Medicine",
+            "description": "Treatment for back, neck, knee, shoulder, joint pain, spine/joint surgery, and rehabilitation programs."
+        }
+    },
+    "aiService": {
+        "title": "AI-Based Intelligent Matching Service",
+        "description": "AI recommends the best medical staff and hospitals based on the patient's symptoms, medical reports, budget, and length of stay.",
+        "bullets": [
+            "AI automatically summarizes and categorizes patient text/documents.",
+            "Matching with Korean medical staff profiles (specialty, career, language, schedule).",
+            "Proposing step-by-step diagnosis/treatment plans considering budget and stay duration.",
+            "Russian-based AI chat for preliminary inquiries and additional questions."
+        ]
+    },
+    "process": {
+        "title": "Process",
+        "steps": [
+            {
+                "title": "Step 1. Online Consultation Request",
+                "description": "Fill out a simple inquiry form or contact via messenger, and share existing test results."
+            },
+            {
+                "title": "Step 2. AI-Based Hospital/Doctor Matching",
+                "description": "AI and coordinators recommend hospitals and medical staff considering the department, budget, and schedule."
+            },
+            {
+                "title": "Step 3. Visa, Flight, Accommodation Preparation",
+                "description": "We guide you on the possibility of a 3-month stay for medical tourism and coordinate accommodation and transportation."
+            },
+            {
+                "title": "Step 4. Arrival in Korea and Treatment",
+                "description": "Check-ups, treatment, surgery, and recovery proceed with airport pickup (optional) and interpretation accompaniment."
+            },
+            {
+                "title": "Step 5. Online Care After Return",
+                "description": "Test result explanation, additional inquiries, and follow-up management are supported online."
+            }
+        ]
+    },
+    "groupVisa": {
+        "title": "Group Medical Tourism and 3-Month Stay",
+        "description": "We support group medical tourism for families, friends, and companies, designing comprehensive check-ups, surgeries, recovery, and rehabilitation assuming a maximum stay of 3 months (90 days). Actual visa issuance may vary depending on the country and individual circumstances."
+    },
+    "hospitals": {
+        "title": "Partner Hospitals and Medical Staff",
+        "items": [
+            {
+                "name": "Samsung Medical Center",
+                "description": "Comprehensive check-ups and specialized treatment through the International Patient Center.",
+                "tag": "General - Gangnam-gu",
+                "address": "81 Irwon-ro, Gangnam-gu, Seoul",
+                "tel": "1599-3114"
+            },
+            {
+                "name": "Asan Medical Center",
+                "description": "Korea's leading hospital providing world-class medical services.",
+                "tag": "General - Songpa-gu",
+                "address": "88 Olympic-ro 43-gil, Songpa-gu, Seoul",
+                "tel": "1688-7575"
+            },
+            {
+                "name": "ID Hospital",
+                "description": "Specialized in facial contouring/orthognathic surgery, operating a dedicated center for foreigners.",
+                "tag": "Plastic Surgery - Gangnam-gu",
+                "address": "142 Dosan-daero, Gangnam-gu, Seoul",
+                "tel": "02-547-0050"
+            },
+            {
+                "name": "JK Plastic Surgery",
+                "description": "Premium plastic surgery leading K-Beauty, 1:1 customized care.",
+                "tag": "Plastic Surgery - Gangnam-gu",
+                "address": "835 Nonhyeon-ro, Gangnam-gu, Seoul",
+                "tel": "02-777-0337"
+            },
+            {
+                "name": "Oracle Dermatology Cheongdam",
+                "description": "Dermatology & beauty clinic with a global network.",
+                "tag": "Dermatology - Gangnam-gu",
+                "address": "12 Seolleung-ro 152-gil, Gangnam-gu, Seoul",
+                "tel": "1800-7588"
+            },
+            {
+                "name": "MizMedi Hospital",
+                "description": "General hospital specializing in infertility and women's diseases, operating an International Medical Center.",
+                "tag": "Women/General - Gangseo-gu",
+                "address": "295 Gangseo-ro, Gangseo-gu, Seoul",
+                "tel": "1588-2701"
+            }
+        ]
+    },
+    "packages": {
+        "title": "Medical + Accommodation Packages",
+        "items": [
+            {
+                "name": "Basic Check-up Package",
+                "duration": "3 Days / 2 Nights",
+                "description": "Basic package including comprehensive check-up, basic accommodation, and 1 interpretation session.",
+                "includes": [
+                    "Comprehensive blood tests and imaging (CT/MRI if needed)",
+                    "Result consultation with a specialist",
+                    "2 nights hotel, 1 airport↔hospital transfer"
+                ],
+                "priceHint": "Approximate price range provided after consultation."
+            },
+            {
+                "name": "Plastic Surgery/Skin Package",
+                "duration": "7 Days",
+                "description": "Beauty purpose package including consultation, surgery/procedure, and basic recovery care.",
+                "includes": [
+                    "Pre-examination and consultation",
+                    "Surgery or procedure, recovery room use",
+                    "Interpretation accompaniment and precautions guidance"
+                ],
+                "priceHint": "Cost varies depending on the scope of surgery."
+            },
+            {
+                "name": "Orthopedics/Spine Joint Package",
+                "duration": "7~30 Days",
+                "description": "Long-term stay package connecting spine/joint diagnosis to procedure/surgery and rehabilitation.",
+                "includes": [
+                    "Precise spine/joint examination",
+                    "Procedure/surgery and inpatient treatment",
+                    "Rehabilitation program and exercise guidance"
+                ],
+                "priceHint": "Customized quote provided based on individual condition."
+            }
+        ]
+    },
+    "testimonials": {
+        "title": "Patient Reviews",
+        "items": [
+            {
+                "name": "Patient A (42 years old)",
+                "country": "Kazakhstan",
+                "text": "I received a comprehensive check-up over 3 days and immediately heard the results and future management plan. Communication was easy thanks to the interpreter.",
+                "procedureType": "Comprehensive Check-up"
+            },
+            {
+                "name": "Patient M (33 years old)",
+                "country": "Uzbekistan",
+                "text": "I felt reassured because the process before and after plastic surgery was systematically guided, and they kept checking on me during the recovery period.",
+                "procedureType": "Plastic Surgery"
+            }
+        ]
+    },
+    "faq": {
+        "title": "Frequently Asked Questions",
+        "items": [
+            {
+                "question": "How much are the medical costs?",
+                "answer": "It depends on the disease, hospital, and scope of necessary tests/surgeries. We provide an approximate cost range after reviewing online consultation and data."
+            },
+            {
+                "question": "How do I get a visa?",
+                "answer": "We guide you on the necessary documents and invitation letter information according to each country's visa requirements. However, final issuance depends on the embassy's judgment."
+            },
+            {
+                "question": "Is interpretation cost included?",
+                "answer": "The basic package includes at least one interpretation session, and additional interpretation can be negotiated separately depending on the schedule and frequency."
+            },
+            {
+                "question": "What if complications occur?",
+                "answer": "We explain foreseeable complications and response plans in advance, and if they occur, additional treatment and management are carried out at the hospital. You can share the situation via online consultation even after returning home."
+            },
+            {
+                "question": "Where do I stay during my visit?",
+                "answer": "We suggest options such as hotels, guesthouses, and residences near the hospital, and select accommodation that fits your budget together."
+            },
+            {
+                "question": "Is online consultation free?",
+                "answer": "Yes, the initial online consultation and basic quote guidance are free."
+            }
+        ]
+    },
+    "contact": {
+        "title": "Consultation / Inquiry",
+        "description": "You can just send simple information. Russian-speaking coordinators and AI service will propose medical institutions and treatment directions together.",
+        "fields": {
+            "name": "Name",
+            "country": "Country/City",
+            "contact": "Contact (WhatsApp / Telegram / Email)",
+            "specialty": "Desired Specialty",
+            "symptoms": "Brief Symptoms or Purpose of Consultation"
+        },
+        "submitLabel": "Send Inquiry",
+        "instantTitle": "Connect Directly to Real-time Channels",
+        "instantChannels": [
+            "WhatsApp",
+            "Telegram",
+            "Instagram",
+            "WeChat"
+        ]
+    },
+    "forDoctorsTeaser": {
+        "title": "Global Channel for Korean Medical Staff & Hospitals",
+        "description": "AI-based overseas patient matching platform for Central Asian patients.",
+        "bullets": [
+            "Register profiles including specialty, detailed field, career, language, and available hours.",
+            "AI analyzes patient information and matches only suitable cases.",
+            "Manage patient inquiries, reservations, consultation history, and statistics in one place."
+        ],
+        "cta": "한국 의료진 현황"
+    },
+    "authLite": {
+        "title": "Already have an account?",
+        "subtitle": "Log in or sign up to see more detailed information.",
+        "loginLabel": "Log In",
+        "registerLabel": "Sign Up"
+    },
+    "auth": {
+        "title": "Integrated Login",
+        "subtitle": "Overseas patients and domestic medical staff manage accounts on one platform.",
+        "roles": {
+            "patient": {
+                "title": "Overseas Patient Login",
+                "description": "Check Korean medical consultation, treatment plans, schedules, and costs."
+            },
+            "doctor": {
+                "title": "Medical Staff/Hospital Login",
+                "description": "Manage matched overseas patient lists, reservations, and consultations."
+            }
+        },
+        "login": {
+            "email": "Email",
+            "password": "Password",
+            "forgot": "Forgot Password?",
+            "loginBtn": "Log In",
+            "registerBtn": "Sign Up"
+        }
+    },
+    "medicalContacts": {
+        "title": "Korean Medical Excellence",
+        "subtitle": "Discover world-class medical services and connect with top specialists in Korea. Your journey to health and beauty starts here.",
+        "button": "View Medical Staff Info",
+        "filters": {
+            "allRegions": "All Regions",
+            "allSpecialties": "All Specialties"
+        },
+        "noResults": "No contacts found matching your criteria."
+    }
+}

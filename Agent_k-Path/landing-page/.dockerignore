@@ -1,0 +1,10 @@
+.next
+node_modules
+out
+npm-debug.log
+yarn-error.log
+.git
+.gitignore
+Dockerfile
+README.md
+*.pem
